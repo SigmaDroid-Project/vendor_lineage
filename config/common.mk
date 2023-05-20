@@ -4,12 +4,6 @@ $(call inherit-product-if-exists, vendor/lineage/config/crdroid.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/alpha.mk)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
 
-# Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
-ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-$(call inherit-product-if-exists, external/faceunlock/config.mk)
-endif
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -145,6 +139,12 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/mount.ntfs \
     system/%/libfuse-lite.so \
     system/%/libntfs-3g.so
+
+# Faceunlock
+TARGET_FACE_UNLOCK_SUPPORTED ?= true
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+$(call inherit-product-if-exists, external/faceunlock/config.mk)
+endif
 
 # Openssh
 PRODUCT_PACKAGES += \
