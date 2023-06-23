@@ -32,6 +32,9 @@ ALPHA_BUILD_PACKAGE := core_gapps
 else
 ifeq ($(GAPPS_BUILD_TYPE),2)
 ALPHA_BUILD_PACKAGE := full_gapps
+ifneq ($(strip $(TARGET_INCLUDE_PIXEL_FRAMEWORK)),false)
+$(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
+endif
 else # default
 ALPHA_BUILD_PACKAGE := vanilla
 endif
