@@ -15,21 +15,21 @@
 # -----------------------------------------------------------------
 # SigmaDroid OTA update package
 
-ALPHA_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(ALPHA_VERSION)_fastboot.zip
 ECHO_BLUE := \e[34m
 ECHO_GREEN := \e[32m
 ECHO_ENDCOLOR := \e[0m
 
 .PHONY: updatepackage
 updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(ALPHA_TARGET_UPDATEPACKAGE)
+#	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SPARK_TARGET_UPDATEPACKAGE)
 	@echo "Generating changelog..."
 	$(hide) ./vendor/lineage/tools/changelog.sh
-	$(hide) cp Changelog.txt $(ALPHA_TARGET_UPDATEPACKAGE)-Changelog.txt
+	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(ALPHA_VERSION)-Changelog.txt
+	$(hide) cp Changelog.txt $(PRODUCT_OUT)/Auto-Changelog.txt
+
 #	$(hide) cp -r $OUT/Changelog.txt $OUT/$(LINEAGE_VERSION)-changelog.txt
 #	$(hide) ./vendor/lineage/build/tasks/betadroid_ascii.sh
 	@echo -e "$(ECHO_GREEN)==============================================================${ECHO_ENDCOLOR}"
-	@echo -e " ${ECHO_BLUE}update package is:${ECHO_ENDCOLOR} $(ALPHA_VERSION)_fastboot.zip"
-	@echo -e " ${ECHO_BLUE}changelog is:${ECHO_ENDCOLOR} $(ALPHA_VERSION)_fastboot.zip-Changelog.txt"
+	@echo -e " ${ECHO_BLUE}Generated Changelog Successfully:${ECHO_ENDCOLOR}"
 	@echo -e "${ECHO_GREEN}==============================================================${ECHO_ENDCOLOR}"
 	@echo ""
