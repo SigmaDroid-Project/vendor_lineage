@@ -24,10 +24,7 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 #	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SPARK_TARGET_UPDATEPACKAGE)
 	@echo "Generating changelog..."
 	$(hide) ./vendor/lineage/tools/changelog.sh
-	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(ALPHA_VERSION)-Changelog.txt
-	$(hide) cp Changelog.txt $(PRODUCT_OUT)/Auto-Changelog.txt
-
-#	$(hide) cp -r $OUT/Changelog.txt $OUT/$(LINEAGE_VERSION)-changelog.txt
+	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(LINEAGE_VERSION)-Changelog.txt
 #	$(hide) ./vendor/lineage/build/tasks/betadroid_ascii.sh
 	@echo -e "$(ECHO_GREEN)==============================================================${ECHO_ENDCOLOR}"
 	@echo -e " ${ECHO_BLUE}Generated Changelog Successfully:${ECHO_ENDCOLOR}"
