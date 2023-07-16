@@ -18,8 +18,8 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
 
 # Sigma properties
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.sigma.build.version=$(LINEAGE_VERSION) \
-    ro.sigma.display.version=$(LINEAGE_DISPLAY_VERSION) \
+    ro.sigma.build.version=$(SIGMA_VERSION) \
+    ro.sigma.display.version=$(SIGMA_DISPLAY_VERSION) \
     ro.sigma.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.sigma.modversion=$(SIGMA_VERSION) \
     ro.sigma.build.package=$(SIGMA_BUILD_PACKAGE) \
