@@ -24,7 +24,7 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 #	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SPARK_TARGET_UPDATEPACKAGE)
 	@echo "Generating changelog..."
 	$(hide) ./vendor/lineage/tools/changelog.sh
-	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(ALPHA_VERSION)-Changelog.txt
+	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(SIGMA_VERSION)-Changelog.txt
 	$(hide) cp Changelog.txt $(PRODUCT_OUT)/Auto-Changelog.txt
 
 #	$(hide) cp -r $OUT/Changelog.txt $OUT/$(LINEAGE_VERSION)-changelog.txt

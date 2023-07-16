@@ -16,13 +16,13 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
 
-# Alpha properties
+# Sigma properties
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.alpha.build.version=$(LINEAGE_VERSION) \
-    ro.alpha.display.version=$(LINEAGE_DISPLAY_VERSION) \
-    ro.alpha.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.alpha.modversion=$(ALPHA_VERSION) \
-    ro.alpha.build.package=$(ALPHA_BUILD_PACKAGE) \
-    ro.alpha.maintainer=$(ALPHA_MAINTAINER) \
-    ro.alpha.release.type=$(ALPHA_BUILD_TYPE) \
-    ro.modversion=$(ALPHA_VERSION)
+    ro.sigma.build.version=$(LINEAGE_VERSION) \
+    ro.sigma.display.version=$(LINEAGE_DISPLAY_VERSION) \
+    ro.sigma.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.sigma.modversion=$(SIGMA_VERSION) \
+    ro.sigma.build.package=$(SIGMA_BUILD_PACKAGE) \
+    ro.sigma.maintainer=$(SIGMA_MAINTAINER) \
+    ro.sigma.release.type=$(SIGMA_BUILD_TYPE) \
+    ro.modversion=$(SIGMA_VERSION)
