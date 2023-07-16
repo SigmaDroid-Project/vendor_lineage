@@ -8,13 +8,13 @@ endif
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.crdroidlegal.url=https://crdroid.net/legal.php
 
-# LineageOS Platform SDK Version
+# SIGMAOS Platform SDK Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.build.version.plat.sdk=$(LINEAGE_PLATFORM_SDK_VERSION)
+    ro.sigma.build.version.plat.sdk=$(SIGMA_PLATFORM_SDK_VERSION)
 
-# LineageOS Platform Internal Version
+# SIGMAOS Platform Internal Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
+    ro.sigma.build.version.plat.rev=$(SIGMA_PLATFORM_REV)
 
 # Sigma properties
 ADDITIONAL_SYSTEM_PROPERTIES += \
