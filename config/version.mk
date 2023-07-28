@@ -1,16 +1,16 @@
 PRODUCT_VERSION_MAJOR = 13
 PRODUCT_VERSION_MINOR = 0
 
-ALPHA_VERSION := 1.7.9
-ALPHA_VARIANT := Droid
+SIGMA_VERSION := 1.7
+SIGMA_VARIANT := Droid
 
 
-ALPHA_BUILD_TYPE ?= UNOFFICIAL
+SIGMA_BUILD_TYPE ?= UNOFFICIAL
 
 # Only include Updater for official builds
-ifeq ($(filter-out OFFICIAL Official official,$(ALPHA_BUILD_TYPE)),)
+ifeq ($(filter-out OFFICIAL Official official,$(SIGMA_BUILD_TYPE)),)
 PRODUCT_PACKAGES += \
-    AlphaUpdater
+    SigmaUpdater
 
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
@@ -28,15 +28,15 @@ GAPPS_BUILD_TYPE := $(strip $(WITH_GAPPS))
 endif
 
 ifeq ($(GAPPS_BUILD_TYPE),1)
-ALPHA_BUILD_PACKAGE := core_gapps
+SIGMA_BUILD_PACKAGE := core_gapps
 else
 ifeq ($(GAPPS_BUILD_TYPE),2)
-ALPHA_BUILD_PACKAGE := full_gapps
+SIGMA_BUILD_PACKAGE := full_gapps
 ifneq ($(strip $(TARGET_INCLUDE_PIXEL_FRAMEWORK)),false)
 $(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
 endif
 else # default
-ALPHA_BUILD_PACKAGE := vanilla
+SIGMA_BUILD_PACKAGE := vanilla
 endif
 endif
 
@@ -44,7 +44,7 @@ endif
 $(call inherit-product, vendor/gms/setup.mk)
 
 # Internal version
-LINEAGE_VERSION := Alpha$(ALPHA_VARIANT)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-$(ALPHA_BUILD_PACKAGE)-v$(ALPHA_VERSION)
+LINEAGE_VERSION := Sigma$(SIGMA_VARIANT)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(SIGMA_BUILD)-$(SIGMA_BUILD_PACKAGE)-v$(SIGMA_VERSION)
 
 # Display version
-LINEAGE_DISPLAY_VERSION := Alpha$(ALPHA_VARIANT)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-$(ALPHA_BUILD_PACKAGE)-v$(ALPHA_VERSION)
+LINEAGE_DISPLAY_VERSION := Sigma$(SIGMA_VARIANT)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(SIGMA_BUILD)-$(SIGMA_BUILD_PACKAGE)-v$(SIGMA_VERSION)
