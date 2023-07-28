@@ -16,6 +16,7 @@
 # SigmaDroid fastboot update package
 
 SIGMA_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION)_fastboot.zip
+SIGMA_TARGET_CHANGELOG := $(PRODUCT_OUT)/$(LINEAGE_VERSION)-Changelog.txt
 ECHO_BLUE := \e[34m
 ECHO_GREEN := \e[32m
 ECHO_ENDCOLOR := \e[0m
@@ -25,10 +26,10 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SIGMA_TARGET_UPDATEPACKAGE)
 	@echo "Generating changelog..."
 	$(hide) ./vendor/lineage/tools/changelog.sh
-	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(LINEAGE_VERSION)-Changelog.txt
+	$(hide) cp Changelog.txt $(SIGMA_TARGET_CHANGELOG)
 	$(hide) ./vendor/lineage/tools/ascii_output.sh
 	@echo -e "$(ECHO_GREEN)===================================================================${ECHO_ENDCOLOR}"
 	@echo -e " ${ECHO_BLUE}update package is:${ECHO_ENDCOLOR} $(SIGMA_TARGET_UPDATEPACKAGE)"
-	@echo -e " ${ECHO_BLUE}changelog is:${ECHO_ENDCOLOR} $(LINEAGE_VERSION)_fastboot.zip-Changelog.txt"
+	@echo -e " ${ECHO_BLUE}changelog is:${ECHO_ENDCOLOR} $(SIGMA_TARGET_CHANGELOG)"
 	@echo -e "${ECHO_GREEN}===================================================================${ECHO_ENDCOLOR}"
 	@echo ""
