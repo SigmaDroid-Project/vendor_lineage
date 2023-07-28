@@ -15,31 +15,21 @@
 # -----------------------------------------------------------------
 # SigmaDroid OTA update package
 
+SIGMA_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION)_fastboot.zip
 ECHO_BLUE := \e[34m
 ECHO_GREEN := \e[32m
 ECHO_ENDCOLOR := \e[0m
-SIGMA_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION)_fastboot.zip
 
 .PHONY: updatepackage
 updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
-	$(hide) mv -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SIGMA_TARGET_UPDATEPACKAGE)
+	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SIGMA_TARGET_UPDATEPACKAGE)
 	@echo "Generating changelog..."
 	$(hide) ./vendor/lineage/tools/changelog.sh
 	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(LINEAGE_VERSION)-Changelog.txt
-	$(hide) cp Changelog.txt $(PRODUCT_OUT)/Auto-Changelog.txt
-	@echo '' >&2
-	@echo '  _____  _                           _____                _      _  ' <&2
-	@echo ' / ____|(_)                         |  __ \              (_)    | | ' <&2
-	@echo '| (___   _   __ _  _ __ ___    __ _ | |  | | _ __   ___   _   __| | ' <&2
-	@echo ' \___ \ | | / _` || '_ ` _ \  / _` || |  | || '__| / _ \ | | / _` | ' <&2
-	@echo ' ____) || || (_| || | | | | || (_| || |__| || |   | (_) || || (_| | ' <&2
-	@echo '|_____/ |_| \__, ||_| |_| |_| \__,_||_____/ |_|    \___/ |_| \__,_| ' <&2
-	@echo '             __/ |                                                  ' <&2
-	@echo '            |___/                                                   ' <&2
-	@echo '' >&2
-	@echo '' >&2
+#	$(hide) cp -r $OUT/Changelog.txt $OUT/$(LINEAGE_VERSION)-changelog.txt
+	$(hide) ./vendor/lineage/tools/ascii_output.sh
 	@echo -e "$(ECHO_GREEN)==============================================================${ECHO_ENDCOLOR}"
-	@echo -e "${ECHO_BLUE}Generated Changelog Successfully ${ECHO_ENDCOLOR}"
-	@echo -e "${ECHO_BLUE}Package Complete: $(SIGMA_TARGET_UPDATEPACKAGE) ${ECHO_ENDCOLOR}"
+	@echo -e " ${ECHO_BLUE}update package is:${ECHO_ENDCOLOR} $(LINEAGE_VERSION)_fastboot.zip"
+	@echo -e " ${ECHO_BLUE}changelog is:${ECHO_ENDCOLOR} $(LINEAGE_VERSION)_fastboot.zip-Changelog.txt"
 	@echo -e "${ECHO_GREEN}==============================================================${ECHO_ENDCOLOR}"
 	@echo ""
