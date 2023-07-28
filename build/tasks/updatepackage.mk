@@ -18,16 +18,15 @@
 ECHO_BLUE := \e[34m
 ECHO_GREEN := \e[32m
 ECHO_ENDCOLOR := \e[0m
-SIGMA_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(SIGMA_VERSION)_fastboot.zip
+SIGMA_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION)_fastboot.zip
 
 .PHONY: updatepackage
 updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	$(hide) mv -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SIGMA_TARGET_UPDATEPACKAGE)
 	@echo "Generating changelog..."
 	$(hide) ./vendor/lineage/tools/changelog.sh
-	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(SIGMA_VERSION)-Changelog.txt
+	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(LINEAGE_VERSION)-Changelog.txt
 	$(hide) cp Changelog.txt $(PRODUCT_OUT)/Auto-Changelog.txt
-
 	@echo '' >&2
 	@echo '  _____  _                           _____                _      _  ' <&2
 	@echo ' / ____|(_)                         |  __ \              (_)    | | ' <&2
@@ -40,7 +39,7 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	@echo '' >&2
 	@echo '' >&2
 	@echo -e "$(ECHO_GREEN)==============================================================${ECHO_ENDCOLOR}"
-	@echo -e "${ECHO_BLUE}Generated Changelog Successfully${ECHO_ENDCOLOR}"
+	@echo -e "${ECHO_BLUE}Generated Changelog Successfully ${ECHO_ENDCOLOR}"
 	@echo -e "${ECHO_BLUE}Package Complete: $(SIGMA_TARGET_UPDATEPACKAGE) ${ECHO_ENDCOLOR}"
 	@echo -e "${ECHO_GREEN}==============================================================${ECHO_ENDCOLOR}"
 	@echo ""
