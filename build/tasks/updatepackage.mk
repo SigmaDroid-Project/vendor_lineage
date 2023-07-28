@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# SigmaDroid OTA update package
+# SigmaDroid fastboot update package
 
 SIGMA_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION)_fastboot.zip
 ECHO_BLUE := \e[34m
@@ -26,10 +26,9 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	@echo "Generating changelog..."
 	$(hide) ./vendor/lineage/tools/changelog.sh
 	$(hide) cp Changelog.txt $(PRODUCT_OUT)/$(LINEAGE_VERSION)-Changelog.txt
-#	$(hide) cp -r $OUT/Changelog.txt $OUT/$(LINEAGE_VERSION)-changelog.txt
 	$(hide) ./vendor/lineage/tools/ascii_output.sh
-	@echo -e "$(ECHO_GREEN)==============================================================${ECHO_ENDCOLOR}"
-	@echo -e " ${ECHO_BLUE}update package is:${ECHO_ENDCOLOR} $(LINEAGE_VERSION)_fastboot.zip"
+	@echo -e "$(ECHO_GREEN)===================================================================${ECHO_ENDCOLOR}"
+	@echo -e " ${ECHO_BLUE}update package is:${ECHO_ENDCOLOR} $(SIGMA_TARGET_UPDATEPACKAGE)"
 	@echo -e " ${ECHO_BLUE}changelog is:${ECHO_ENDCOLOR} $(LINEAGE_VERSION)_fastboot.zip-Changelog.txt"
-	@echo -e "${ECHO_GREEN}==============================================================${ECHO_ENDCOLOR}"
+	@echo -e "${ECHO_GREEN}===================================================================${ECHO_ENDCOLOR}"
 	@echo ""
