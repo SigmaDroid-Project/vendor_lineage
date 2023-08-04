@@ -29,4 +29,4 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.sigma.release.type=$(SIGMA_BUILD_TYPE) \
     ro.sigma.build.date=$(shell date +%D%Y%m) \
     ro.modversion=$(SIGMA_VERSION) \
-    ro.sigma.display.build.date=$(shell date +'%Y - %m - %d')
+    ro.sigma.display.build.date=$(shell date '+%Y-%m-%d')
