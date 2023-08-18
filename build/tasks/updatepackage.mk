@@ -27,7 +27,7 @@ SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SIGMA_TARGET_UPDATEPACKAGE)
 	$(hide) $(SHA256) $(SIGMA_TARGET_UPDATEPACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(SIGMA_TARGET_UPDATEPACKAGE).sha256sum
-	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(SIGMA_TARGET_UPDATEPACKAGE)
+	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(LINEAGE_VERSION)_fastboot.zip
 	@echo "Generating changelog..."
 	$(hide) ./vendor/lineage/tools/changelog.sh
 	$(hide) cp Changelog.txt $(SIGMA_TARGET_CHANGELOG)
