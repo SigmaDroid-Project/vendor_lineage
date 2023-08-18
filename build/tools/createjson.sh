@@ -115,9 +115,6 @@ if [ -f $existingOTAjson ]; then
 	]
 }' >> $output
 
-echo ""
-cat $output
-
 else
 	version=$(awk '{ sub(/v/, ""); sub(/\.zip/, ""); print }' <<< `echo "$3" | cut -d'-' -f6`)
 	buildprop=$2/system/build.prop
