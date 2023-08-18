@@ -1,11 +1,11 @@
 PRODUCT_VERSION_MAJOR = 13
 PRODUCT_VERSION_MINOR = 0
 
-SIGMA_VERSION := v0.5
+SIGMA_VERSION := v1.0
 SIGMA_VARIANT := Droid
 
 
-SIGMA_BUILD_TYPE ?= PREVIEW
+SIGMA_BUILD_TYPE ?= PRE-RELEASE
 
 # Only include Updater for official builds
 # ifeq ($(filter-out OFFICIAL Official official,$(SIGMA_BUILD_TYPE)),)
