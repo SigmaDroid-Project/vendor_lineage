@@ -16,7 +16,7 @@
 # -----------------------------------------------------------------
 # SIGMA OTA update package
 
-SIGMA_TARGET_PACKAGE := $(PRODUCT_OUT)/$(SIGMA_VERSION).zip
+SIGMA_TARGET_PACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
@@ -24,7 +24,7 @@ SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv -f $(INTERNAL_OTA_PACKAGE_TARGET) $(SIGMA_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(SIGMA_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(SIGMA_TARGET_PACKAGE).sha256sum
-	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(SIGMA_VERSION).zip
+	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(LINEAGE_VERSION).zip
 	$(hide) rm -rf $(call intermediates-dir-for,PACKAGING,target_files)
 	@echo '' >&2
 	@echo '_______ ______         ______          ________                _____ _________ ' >&2
