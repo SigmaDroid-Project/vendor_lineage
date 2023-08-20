@@ -187,6 +187,9 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+PRODUCT_PROPERTY_OVERRIDES += service.adb.root=1 \
+                              ro.adb.secure=0
+
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
