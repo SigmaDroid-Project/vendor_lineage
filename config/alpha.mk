@@ -5,7 +5,6 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     RepainterServicePriv
 
-
 ifeq ($(TARGET_INCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
