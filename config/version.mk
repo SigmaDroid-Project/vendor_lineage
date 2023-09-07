@@ -8,13 +8,13 @@ SIGMA_VARIANT := Droid
 SIGMA_BUILD_TYPE ?= OFFICIAL
 
 # Only include Updater for official builds
-# ifeq ($(filter-out OFFICIAL Official official,$(SIGMA_BUILD_TYPE)),)
-# PRODUCT_PACKAGES += \
-#     SigmaUpdater
+ifeq ($(filter-out OFFICIAL Official official,$(SIGMA_BUILD_TYPE)),)
+PRODUCT_PACKAGES += \
+    SigmaUpdater
 
-# PRODUCT_COPY_FILES += \
-#     vendor/lineage/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
-# endif
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
+endif
 
 ifeq ($(WITH_GAPPS), true)
   SIGMA_BUILD_PACKAGE := gapps
