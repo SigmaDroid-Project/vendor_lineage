@@ -205,6 +205,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/lineage/overlay/no-rro
 
 PRODUCT_PACKAGES += \
+    AOSPConfigOverlay \
     DocumentsUIOverlay \
     NetworkStackOverlay
 

@@ -1,0 +1,13 @@
+<!--
+     Copyright (C) 2022 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.overlay.aospconfig"
+    android:allowBackup="false"
+    android:versionCode="1"
+    android:versionName="1.0">>
+    <overlay android:targetPackage="android"
+                   android:isStatic="true"
+                   android:priority="0"/>
+</manifest>

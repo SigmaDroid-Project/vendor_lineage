@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="config_defaultNearbyFastPairSettingsDevicesComponent">com.google.android.gms/com.google.android.gms.nearby.discovery.devices.SavedDevicesSettingsActivity</string>
+    <string name="config_devicePolicyManagementUpdater">com.google.android.gms</string>
+    <string name="config_loggable_dream_prefix">com.google.</string>
+    <string name="config_systemBluetoothStack">com.android.bluetooth</string>
+    <string name="config_systemGameService">com.google.android.gms</string>
+    <string name="config_systemSettingsIntelligence">com.google.android.settings.intelligence</string>
+    <string name="safety_protection_display_text">&lt;font face=\"google-sans\">Protected by &lt;/font>&lt;font face=\"google-sans-medium\">Android&lt;/font></string>
+</resources>
