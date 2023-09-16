@@ -5,7 +5,7 @@ SIGMA_VERSION := v1.2.4
 SIGMA_VARIANT := Droid
 
 
-SIGMA_BUILD_TYPE ?= OFFICIAL
+SIGMA_BUILD_TYPE ?= UNOFFICIAL
 
 # Only include Updater for official builds
 ifeq ($(filter-out OFFICIAL Official official,$(SIGMA_BUILD_TYPE)),)
