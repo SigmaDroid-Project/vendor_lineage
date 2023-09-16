@@ -32,7 +32,7 @@ if [ -f $existingOTAjson ]; then
 	maintainer=`grep -m 1 -n "\"maintainer\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
 	oem=`grep -m 1 -n "\"oem\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
 	device=`grep -m 1 -n "\"device\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
-	version=$(awk '{ sub(/v/, ""); sub(/\.zip/, ""); print }' <<< `echo "$3" | cut -d'-' -f6`)
+	version=$(awk '{ sub(/v/, ""); print }' <<< `echo "$3" | cut -d'-' -f2`)
 	buildprop=$2/system/build.prop
 	linenr=`grep -m 1 -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
 	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
