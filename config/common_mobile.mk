@@ -19,15 +19,8 @@ PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
     Jelly \
-    Profiles
-
-# Seedvault
-TARGET_EXCLUDES_SEEDVAULT ?=true
-ifneq ($(TARGET_EXCLUDES_SEEDVAULT),true)
-PRODUCT_PACKAGES += \
-    Seedvault \
-    OverlaySettingsProvider
-endif
+    Profiles \
+    Seedvault
 
 ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
 PRODUCT_PACKAGES += \
