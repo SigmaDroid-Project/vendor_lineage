@@ -2,8 +2,7 @@ PRODUCT_BRAND ?= Sigma
 
 # Packages
 PRODUCT_PACKAGES += \
-    Launcher3QuickStep \
-    RepainterServicePriv
+    Launcher3QuickStep
 
 ifeq ($(TARGET_INCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
