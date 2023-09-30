@@ -22,6 +22,6 @@
     <dimen name="global_actions_translate">0dp</dimen>
 
     <!-- QS Header height full -->
-    <dimen name="qs_header_height_full">120dp</dimen>
+    <!-- <dimen name="qs_header_height_full">120dp</dimen> -->
 
 </resources>
