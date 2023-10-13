@@ -18,7 +18,7 @@ endif
 
 ifeq ($(WITH_GAPPS), true)
   SIGMA_BUILD_PACKAGE := gapps
-  $(call inherit-product, vendor/gms/products/gms.mk)
+  $(call inherit-product, vendor/gms/setup.mk)
   ifeq ($(TARGET_INCLUDE_PIXEL_FRAMEWORK), true)
     $(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
   endif
