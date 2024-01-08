@@ -41,10 +41,10 @@ except ImportError:
 DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
-custom_default_revision =  "alpha-14"
+custom_default_revision =  "sigma-14"
 custom_dependencies = "lineage.dependencies"
-org_manifest = "alphadroid"  # leave empty if org is provided in manifest
-org_display = "AlphaDroid"  # needed for displaying
+org_manifest = "sigmadroid"  # leave empty if org is provided in manifest
+org_display = "SigmaDroid"  # needed for displaying
 
 github_auth = None
 
@@ -286,7 +286,7 @@ def main():
         fallback_branch = detect_revision(repository)
         manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
         repo_path = "device/%s/%s" % (manufacturer, device)
-        adding = [{'repository': "alphadroid-devices/" + repo_name, 'target_path': repo_path}]
+        adding = [{'repository': "sigmadroid-devices/" + repo_name, 'target_path': repo_path}]
 
         add_to_manifest(adding, fallback_branch)
 

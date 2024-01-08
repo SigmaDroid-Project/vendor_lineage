@@ -1,5 +1,3 @@
-PRODUCT_BRAND ?= Alpha
-
 ifeq ($(TARGET_INCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
