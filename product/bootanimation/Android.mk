@@ -34,7 +34,7 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	    mkdir -p $(INTERMEDIATES)/part$$part_cnt; \
 	done; \
 	prebuilts/tools-lineage/${HOST_OS}-x86/bin/mogrify -resize $$RESOLUTION -colors 250 $(INTERMEDIATES)/*/*.png; \
-	echo "$$IMAGEWIDTH $$IMAGEWIDTH 30" > $(INTERMEDIATES)/desc.txt; \
+	echo "1080 1080 30" > $(INTERMEDIATES)/desc.txt; \
 	cat vendor/lineage/product/bootanimation/desc.txt >> $(INTERMEDIATES)/desc.txt
 	$(hide) $(SOONG_ZIP) -L 0 -o $@ -C $(INTERMEDIATES) -D $(INTERMEDIATES)
 
