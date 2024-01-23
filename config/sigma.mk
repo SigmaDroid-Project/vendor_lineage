@@ -1,5 +1,10 @@
 PRODUCT_BRAND ?= Sigma
 
+# Pif Packages
+PRODUCT_PACKAGES += \
+	PifPrebuilt \
+	Pif \
+
 # RRO Packages
 PRODUCT_PACKAGES += \
     ClearCallingSettingsOverlay
