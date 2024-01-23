@@ -27,4 +27,5 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.sigma.release.type=$(SIGMA_BUILD_TYPE) \
     ro.modversion=$(SIGMA_VERSION) \
     ro.sigma.build.date=$(shell date +%D%Y%m) \
-    ro.sigma.display.build.date=$(shell date '+%Y-%m-%d')
+    ro.sigma.display.build.date=$(shell date '+%Y-%m-%d') \
+    ro.sigma.battery.capacity=$(SIGMA_BATTERY_CAPACITY)
