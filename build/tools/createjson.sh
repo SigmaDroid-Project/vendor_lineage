@@ -116,7 +116,7 @@ if [ -f $existingOTAjson ]; then
 }' >> $output
 
 else
-	version=$(awk '{ sub(/v/, ""); sub(/\.zip/, ""); print }' <<< `echo "$3" | cut -d'-' -f6`)
+	version=$(awk '{ sub(/v/, ""); print }' <<< `echo "$3" | cut -d'-' -f2`)
 	buildprop=$2/system/build.prop
 	linenr=`grep -m 1 -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
 	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
