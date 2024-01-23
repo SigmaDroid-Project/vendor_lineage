@@ -14,9 +14,13 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# SIGMA OTA update package
 
 SIGMA_TARGET_PACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION).zip
+SIGMA_TARGET_CHANGELOG := $(PRODUCT_OUT)/$(LINEAGE_VERSION)-Changelog.txt
+ECHO_BLUE := \e[34m
+ECHO_GREEN := \e[32m
+ECHO_ENDCOLOR := \e[0m
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
@@ -25,14 +29,13 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv -f $(INTERNAL_OTA_PACKAGE_TARGET) $(SIGMA_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(SIGMA_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(SIGMA_TARGET_PACKAGE).sha256sum
 	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(LINEAGE_VERSION).zip
+	@echo "Generating changelog..."
+	$(hide) ./vendor/lineage/tools/changelog.sh
+	$(hide) cp Changelog.txt $(SIGMA_TARGET_CHANGELOG)
 	$(hide) rm -rf $(call intermediates-dir-for,PACKAGING,target_files)
-	@echo '' >&2
-	@echo '_______ ______         ______          ________                _____ _________ ' >&2
-	@echo '___    |___  /________ ___  /_ ______ ____  __ \______________ ___(_)______  / ' >&2
-	@echo '__  /| |__  / ___  __ \__  __ \_  __ `/__  / / /__  ___/_  __ \__  / _  __  /  ' >&2
-	@echo '_  ___ |_  /  __  /_/ /_  / / // /_/ / _  /_/ / _  /    / /_/ /_  /  / /_/ /   ' >&2
-	@echo '/_/  |_|/_/   _  .___/ /_/ /_/ \__,_/  /_____/  /_/     \____/ /_/   \__,_/    ' >&2
-	@echo '              /_/                                                              ' >&2
-	@echo '' >&2
-	@echo '' >&2
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) ./vendor/lineage/tools/ascii_output.sh
+	@echo -e "$(ECHO_GREEN)===================================================================${ECHO_ENDCOLOR}"
+	@echo -e " ${ECHO_BLUE}OTA Package Complete:${ECHO_ENDCOLOR} $(SIGMA_TARGET_PACKAGE)"
+	@echo -e " ${ECHO_BLUE}OTA Changelog:${ECHO_ENDCOLOR} $(SIGMA_TARGET_CHANGELOG)"
+	@echo -e "${ECHO_GREEN}===================================================================${ECHO_ENDCOLOR}"
+	@echo ""

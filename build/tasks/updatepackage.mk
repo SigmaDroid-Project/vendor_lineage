@@ -33,7 +33,7 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	$(hide) cp Changelog.txt $(SIGMA_TARGET_CHANGELOG)
 	$(hide) ./vendor/lineage/tools/ascii_output.sh
 	@echo -e "$(ECHO_GREEN)===================================================================${ECHO_ENDCOLOR}"
-	@echo -e " ${ECHO_BLUE}update package is:${ECHO_ENDCOLOR} $(SIGMA_TARGET_UPDATEPACKAGE)"
-	@echo -e " ${ECHO_BLUE}changelog is:${ECHO_ENDCOLOR} $(SIGMA_TARGET_CHANGELOG)"
+	@echo -e " ${ECHO_BLUE}fastboot update package is:${ECHO_ENDCOLOR} $(SIGMA_TARGET_UPDATEPACKAGE)"
+	@echo -e " ${ECHO_BLUE}fastboot changelog is:${ECHO_ENDCOLOR} $(SIGMA_TARGET_CHANGELOG)"
 	@echo -e "${ECHO_GREEN}===================================================================${ECHO_ENDCOLOR}"
 	@echo ""
