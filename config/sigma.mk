@@ -1,5 +1,8 @@
 PRODUCT_BRAND ?= Sigma
 
+# Certification (SafetyNet)
+$(call inherit-product-if-exists, vendor/certification/config.mk)
+
 # RRO Packages
 PRODUCT_PACKAGES += \
     ClearCallingSettingsOverlay
