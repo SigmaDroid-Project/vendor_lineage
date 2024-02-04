@@ -28,8 +28,6 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(SIGMA_TARGET_UPDATEPACKAGE)
 	$(hide) $(SHA256) $(SIGMA_TARGET_UPDATEPACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(SIGMA_TARGET_UPDATEPACKAGE).sha256sum
 	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(LINEAGE_VERSION)_fastboot.zip
-	@echo "Generating changelog..."
-	$(hide) ./vendor/lineage/tools/changelog.sh
 	$(hide) cp Changelog.txt $(SIGMA_TARGET_CHANGELOG)
 	$(hide) ./vendor/lineage/tools/ascii_output.sh
 	@echo -e "$(ECHO_GREEN)===================================================================${ECHO_ENDCOLOR}"

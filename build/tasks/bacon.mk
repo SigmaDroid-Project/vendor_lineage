@@ -29,8 +29,6 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv -f $(INTERNAL_OTA_PACKAGE_TARGET) $(SIGMA_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(SIGMA_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(SIGMA_TARGET_PACKAGE).sha256sum
 	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(LINEAGE_VERSION).zip
-	@echo "Generating changelog..."
-	$(hide) ./vendor/lineage/tools/changelog.sh
 	$(hide) cp Changelog.txt $(SIGMA_TARGET_CHANGELOG)
 	$(hide) rm -rf $(call intermediates-dir-for,PACKAGING,target_files)
 	$(hide) ./vendor/lineage/tools/ascii_output.sh
