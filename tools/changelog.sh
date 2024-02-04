@@ -58,4 +58,5 @@ done
 sed -i 's/project/   */g' $Changelog
 
 cp $Changelog $OUT_DIR/target/product/$DEVICE/system/etc/$Changelog
+cp $Changelog $OUT_DIR/target/product/$DEVICE/system/etc/Changelog.txt
 cp $Changelog $OUT_DIR/target/product/$DEVICE/
