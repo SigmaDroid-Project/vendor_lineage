@@ -47,9 +47,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/backuptool_ab.functions \
     system/bin/backuptool_postinstall.sh
 
+endif
+# always allow OTA downgrade
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
-endif
 
 # Lineage-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
