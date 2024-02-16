@@ -6,7 +6,8 @@ $(call inherit-product-if-exists, vendor/certification/config.mk)
 # RRO Packages
 PRODUCT_PACKAGES += \
     ClearCallingSettingsOverlay \
-    AndroidOverlay
+    AndroidOverlay \
+    Launcher3Overlay
 
 # Pixel Face Unlock
 ifneq ($(filter blueline crosshatch bonito sargo flame coral sunfish bramble barbet redfin oriole raven bluejay panther cheetah lynx husky shiba, $(TARGET_DEVICE)),)
