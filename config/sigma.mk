@@ -8,8 +8,7 @@ PRODUCT_PACKAGES += \
     ClearCallingSettingsOverlay \
     AndroidOverlay \
     Launcher3Overlay \
-    SettingsOverlay \
-    SystemUIOverlay
+    SettingsOverlay
 
 # Pixel Face Unlock
 ifneq ($(filter blueline crosshatch bonito sargo flame coral sunfish bramble barbet redfin oriole raven bluejay panther cheetah lynx husky shiba, $(TARGET_DEVICE)),)
