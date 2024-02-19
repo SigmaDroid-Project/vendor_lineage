@@ -960,7 +960,6 @@ function fixup_common_out_dir() {
     fi
 }
 
-echo "Building with ThinLTO."
 export USE_THINLTO_CACHE=true
 
 export SKIP_ABI_CHECKS=true
