@@ -43,8 +43,8 @@ DEBUG = False
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
 custom_default_revision =  "sigma-14"
 custom_dependencies = "lineage.dependencies"
-org_manifest = "sigmadroid"  # leave empty if org is provided in manifest
-org_display = "SigmaDroid"  # needed for displaying
+org_manifest = "SigmaDroid-Devices"  # leave empty if org is provided in manifest
+org_display = "SigmaDroid-Devices"  # needed for displaying
 
 github_auth = None
 
@@ -278,13 +278,13 @@ def main():
     for repository in repositories:
         repo_name = repository['name']
 
-        if not (repo_name.startswith("android_device_") and
+        if not (repo_name.startswith("device_") and
                 repo_name.endswith("_" + device)):
             continue
         print("Found repository: %s" % repository['name'])
 
         fallback_branch = detect_revision(repository)
-        manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
+        manufacturer = repo_name.replace("device_", "").replace("_" + device, "")
         repo_path = "device/%s/%s" % (manufacturer, device)
         adding = [{'repository': "sigmadroid-devices/" + repo_name, 'target_path': repo_path}]
 
