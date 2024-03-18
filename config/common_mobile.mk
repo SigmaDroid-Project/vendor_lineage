@@ -16,7 +16,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     Backgrounds \
     ExactCalculator \
-    Jelly
+    Jelly \
+    Glimpse
 
 # Charger
 PRODUCT_PACKAGES += \
