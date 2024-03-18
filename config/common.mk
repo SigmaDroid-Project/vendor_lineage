@@ -119,7 +119,8 @@ PRODUCT_PACKAGES += \
 
 # Config
 PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
+    SimpleDeviceConfig \
+    SimpleSettingsConfig
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
