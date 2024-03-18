@@ -62,7 +62,8 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 PRODUCT_PACKAGES += \
     BatteryStatsViewer \
     GameSpace \
-    OmniJaws
+    OmniJaws \
+    OmniStyle
 
 ifneq ($(TARGET_FACE_UNLOCK_SUPPORTED),false)
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
