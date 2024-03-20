@@ -9,9 +9,16 @@ PRODUCT_PACKAGES += \
     Launcher3Overlay \
     SettingsOverlay
 
-# Pixel Face Unlock
+# Pixel Specific
 ifneq ($(filter blueline crosshatch bonito sargo flame coral sunfish bramble barbet redfin oriole raven bluejay panther cheetah lynx husky shiba, $(TARGET_DEVICE)),)
+
+# Face Unlock
 -include vendor/google/faceunlock/device.mk
+
+# RROs
+PRODUCT_PACKAGES += \
+    PixelSettingsGoogleOverlay \
+    PixelSystemUIGoogleOverlay
 endif
 
 # Clear Calling (P22+)
