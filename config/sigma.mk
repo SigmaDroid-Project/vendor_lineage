@@ -10,19 +10,14 @@ PRODUCT_PACKAGES += \
     SettingsOverlay
 
 # Pixel Specific
-ifneq ($(filter blueline crosshatch bonito sargo flame coral sunfish bramble barbet redfin oriole raven bluejay panther cheetah lynx husky shiba, $(TARGET_DEVICE)),)
-
-# Face Unlock
--include vendor/google/faceunlock/device.mk
-
-# RROs
+ifeq ($(TARGET_IS_PIXEL),true)
 PRODUCT_PACKAGES += \
     PixelSettingsGoogleOverlay \
     PixelSystemUIGoogleOverlay
 endif
 
 # Clear Calling (P22+)
-ifneq ($(filter bluejay panther cheetah lynx husky shiba, $(TARGET_DEVICE)),)
+ifeq ($(TARGET_SUPPORTS_CLEAR_CALLING),true)
 PRODUCT_PACKAGES += \
     ClearCallingSettingsOverlay
 endif
