@@ -22,3 +22,8 @@ BUILD_GMS_OVERLAYS_AND_PROPS := true
 $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
+# RRO Packages
+PRODUCT_PACKAGES += \
+    AndroidOverlay \
+    Launcher3Overlay \
+    SettingsOverlay
