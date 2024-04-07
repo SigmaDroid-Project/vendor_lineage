@@ -1,10 +1,9 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/crdroid.mk)
+$(call inherit-product-if-exists, vendor/lineage/config/sigma.mk)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
 $(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
-
-PRODUCT_BRAND ?= crDroidAndroid
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -56,10 +55,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/backuptool_ab.sh \
     system/bin/backuptool_ab.functions \
     system/bin/backuptool_postinstall.sh
+endif
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
-endif
 
 # Lineage-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
@@ -80,10 +79,6 @@ PRODUCT_COPY_FILES += \
 # This is Lineage!
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/org.lineageos.android.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.android.xml
-
-# Enforce privapp-permissions whitelist
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
 
 ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 # Lineage SDK
@@ -138,11 +133,7 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_PACKAGES += \
-    LineageSettingsProvider \
-    Updater
-
-PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
+    LineageSettingsProvider
 
 # Config
 PRODUCT_PACKAGES += \
