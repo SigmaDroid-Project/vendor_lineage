@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- <string name="config_bodyFontFamily">googlesans-text</string>
+    <string name="config_bodyFontFamilyMedium">googlesans-text-medium</string>
+    <string name="config_clockFontFamily">googlesans-clock</string>
+    <string name="config_headlineFontFamily">googlesans</string>
+    <string name="config_headlineFontFamilyMedium">googlesans-medium</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
+    <string-array name="config_globallyDisabledComponents" translatable="false">
+        <item>com.android.vending/com.google.android.finsky.systemupdate.SystemUpdateSettingsContentProvider</item>
+        <item>com.android.vending/com.google.android.finsky.systemupdateactivity.SettingsSecurityEntryPoint</item>
+        <item>com.android.vending/com.google.android.finsky.systemupdateactivity.SystemUpdateActivity</item>
+        <item>com.google.android.gms/com.google.android.gms.update.phone.PopupDialog</item>
+        <item>com.google.android.gms/com.google.android.gms.update.OtaSuggestionSummaryProvider</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateActivity</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
+        <item>com.google.android.dialer/com.android.dialer.rtt.settings.impl.gateway.RttSettingsDeepLink</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.ActiveReceiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.Receiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.SecretCodeReceiver</item>
+        <item>com.google.android.gms/com.google.android.gms.chimera.GmsIntentOperationService$GmsExternalReceiver</item>
+    </string-array> -->
+
+    <string-array name="config_forceEnabledComponents" translatable="false">
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryContentProvider</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.favorites.FavoritesReceiver</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.AddShortcutActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryGarbageCollector</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.reload.ModelReloadService</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.InternalBroadcastReceiver</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicDetectorReceiver</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicDetectorService</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSettingsActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicNotificationsSettingsActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSetupWizardActivity</item>
+    </string-array>
+
+    <string name="config_systemAmbientAudioIntelligence">com.google.android.as</string>
+
+    <!-- Controls the navigation bar interaction mode:
+         0: 3 button mode (back, home, overview buttons)
+         1: 2 button mode (back, home buttons + swipe up for overview)
+         2: gestures only for back, home and overview -->
+    <integer name="config_navBarInteractionMode">2</integer>
+
+    <!-- Control the behavior when the user long presses the power button.
+            0 - Nothing
+            1 - Global actions menu
+            2 - Power off (with confirmation)
+            3 - Power off (without confirmation)
+            4 - Go to voice assist
+            5 - Go to assistant (Settings.Secure.ASSISTANT)
+    -->
+    <integer name="config_longPressOnPowerBehavior">1</integer>
+
+    <!-- Control the behavior when the user presses the power and volume up buttons together.
+            0 - Nothing
+            1 - Mute toggle
+            2 - Global actions menu
+    -->
+    <integer name="config_keyChordPowerVolumeUp">1</integer>
+
+    <!-- Define device configs on boot -->
+    <string-array name="global_device_configs_override">
+
+        <!-- Machine learning back gesture (requires TensorFlow model) -->
+        <item>systemui/use_back_gesture_ml_model=true</item>
+        <item>systemui/back_gesture_ml_model_name=backgesture</item>
+        <item>systemui/back_gesture_ml_model_threshold=0.8</item>
+
+        <!-- Notifications -->
+        <item>notification_assistant/generate_actions=true</item>
+        <item>notification_assistant/generate_replies=true</item>
+
+        <!-- Pixel Launcher -->
+        <item>launcher/enable_one_search=true</item>
+        <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=true</item>
+        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
+        <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
+        <item>launcher/ENABLE_QUICK_LAUNCH_V2=true</item>
+        <item>launcher/GBOARD_UPDATE_ENTER_KEY=true</item>
+        <item>launcher/enable_quick_launch_v2=true</item>
+
+        <!-- Pixel Launcher (Recents) -->
+        <item>device_personalization_services/Overview__enable_barcode_detection=false</item>
+        <item>device_personalization_services/Overview__enable_image_search=false</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
+
+        <!-- Privacy -->
+        <item>privacy/location_accuracy_enabled=true</item>
+        <item>privacy/permissions_hub_enabled=true</item>
+        <item>privacy/permissions_hub_2_enabled=true</item>
+        <item>privacy/privacy_dashboard_7_day_toggle=true</item>
+        <item>privacy/warning_banner_enabled=true</item>
+        <item>privacy/safety_protection_enabled=true</item>
+
+        <!-- System Ui -->
+        <item>systemui/quick_access_wallet_enabled=true</item>
+        <item>systemui/enable_screenshot_corner_flow=true</item>
+        <item>systemui/enable_screenshot_notification_smart_actions=true</item>
+        <item>systemui/enable_screenshot_scrolling=true</item>
+
+        <!-- Enable app cloning  -->
+        <item>app_cloning/cloned_apps_enabled=true</item>
+        <item>app_cloning/delete_all_app_clones_enabled=true</item>
+        <item>app_cloning/enable_app_cloning_building_blocks=true</item>
+
+        <item>window_manager/enable_app_compat_aspect_ratio_user_settings=true</item>
+        <item>window_manager/enable_app_compat_user_aspect_ratio_fullscreen=true</item>
+
+    </string-array>
+
+    <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- The type of the light sensor to be used by the display framework for things like
+         auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
+    <string name="config_displayLightSensorType" translatable="false">android.sensor.light</string>
+
+     <bool name="config_appCompatUserAppAspectRatioSettingsIsEnabled">true</bool>
+     <bool name="config_appCompatUserAppAspectRatioFullscreenIsEnabled">true</bool>
+
+     <bool name="config_faceAuthDismissesKeyguard">false</bool>
+</resources>
