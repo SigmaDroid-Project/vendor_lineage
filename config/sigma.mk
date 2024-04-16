@@ -22,6 +22,15 @@ BUILD_GMS_OVERLAYS_AND_PROPS := true
 $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
+TARGET_SUPPORTS_QUICK_TAP ?= false
+ifeq ($(TARGET_SUPPORTS_QUICK_TAP), true)
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=true
+else
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=true
+endif
+
 # RRO Packages
 PRODUCT_PACKAGES += \
     AndroidOverlay \
