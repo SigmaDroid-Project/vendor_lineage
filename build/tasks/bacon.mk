@@ -25,7 +25,7 @@ ECHO_ENDCOLOR := \e[0m
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 .PHONY: bacon
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
+bacon: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv -f $(INTERNAL_OTA_PACKAGE_TARGET) $(SIGMA_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(SIGMA_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(SIGMA_TARGET_PACKAGE).sha256sum
 	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(LINEAGE_VERSION).zip
