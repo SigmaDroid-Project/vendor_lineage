@@ -12,10 +12,6 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
-# Disable blur on app launch
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.launcher.blur.appLaunch=0
-
 # GMS
 ifeq ($(WITH_GMS),true)
 BUILD_GMS_OVERLAYS_AND_PROPS := true
