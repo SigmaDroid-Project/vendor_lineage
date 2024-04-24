@@ -28,3 +28,16 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Disable mobile data by default
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.android.mobiledata=false
+
+# Include Carrier Runtime Configuration
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/lineage/CarrierSettings/overlay
+
+# RRO Packages
+PRODUCT_PACKAGES += \
+    CarrierSettingsOverlay \
+    CarrierSettingsConfigOverlay \
+    CarrierSettingsProviderOverlay \
+    CarrierSettingsSystemUIOverlay \
+    TeleServiceOverlay \
+    TelephonyProviderOverlay
