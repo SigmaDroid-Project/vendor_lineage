@@ -46,7 +46,7 @@ except ImportError:
 DEBUG = True
 
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'sigma-14')
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'sigma-14.2')
 custom_dependencies = "lineage.dependencies"
 org_manifest = "sigma-devices"  # leave empty if org is provided in manifest
 org_display = "sigmadroid-devices"  # needed for displaying
