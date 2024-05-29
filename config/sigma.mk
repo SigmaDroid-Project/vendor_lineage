@@ -45,3 +45,7 @@ ifeq ($(TARGET_SUPPORTS_CLEAR_CALLING),true)
 PRODUCT_PACKAGES += \
     ClearCallingSettingsOverlay
 endif
+
+# Launcher3 as Default Launcher
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.default_launcher=0
