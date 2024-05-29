@@ -21,10 +21,7 @@ endif
 TARGET_SUPPORTS_QUICK_TAP ?= false
 ifeq ($(TARGET_SUPPORTS_QUICK_TAP), true)
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.columbus.use_ap_sensor=true
-else
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.columbus.use_ap_sensor=true
+    persist.columbus.use_ap_sensor=false
 endif
 
 # RRO Packages
