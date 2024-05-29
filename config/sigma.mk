@@ -30,8 +30,7 @@ endif
 # RRO Packages
 PRODUCT_PACKAGES += \
     AndroidOverlay \
-    Launcher3Overlay \
-    SettingsOverlay
+    Launcher3Overlay
 
 # Pixel Specific
 ifeq ($(TARGET_IS_PIXEL),true)
