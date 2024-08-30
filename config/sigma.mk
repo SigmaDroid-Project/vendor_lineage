@@ -1,8 +1,5 @@
 PRODUCT_BRAND ?= Sigma
 
-# Certification (SafetyNet)
-$(call inherit-product-if-exists, vendor/certification/config.mk)
-
 ifeq ($(TARGET_INCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
