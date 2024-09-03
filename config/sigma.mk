@@ -61,13 +61,13 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # PIF GMS Spoof
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.pihooks_BRAND=google \
-    persist.sys.pihooks_DEVICE=husky \
+    persist.sys.pihooks_DEVICE=akita \
     persist.sys.pihooks_DEVICE_INITIAL_SDK_INT=21 \
-    persist.sys.pihooks_FINGERPRINT=google/husky_beta/husky:15/AP31.240617.015/12207491:user/release-keys \
+    persist.sys.pihooks_FINGERPRINT=google/akita_beta/akita:15/AP31.240617.015/12207491:user/release-keys \
     persist.sys.pihooks_ID=AP31.240617.015 \
     persist.sys.pihooks_MANUFACTURER=Google \
-    persist.sys.pihooks_MODEL="Pixel\ 8\ Pro" \
-    persist.sys.pihooks_PRODUCT=husky_beta \
+    persist.sys.pihooks_MODEL="Pixel\ 8a" \
+    persist.sys.pihooks_PRODUCT=akita_beta \
     persist.sys.pihooks_SECURITY_PATCH=2024-08-05
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
