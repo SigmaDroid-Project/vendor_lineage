@@ -48,28 +48,19 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.pihooks_mainline_BRAND?=google \
     persist.sys.pihooks_mainline_DEVICE?=caiman \
     persist.sys.pihooks_mainline_MANUFACTURER?=Google \
-    persist.sys.pihooks_mainline_PRODUCT?=caiman \
-    ro.product.model_for_attestation?=Pixel 9 Pro \
-    ro.product.brand_for_attestation?=google \
-    ro.product.name_for_attestation?=caiman \
-    ro.product.device_for_attestation?=caiman \
-    ro.product.manufacturer_for_attestation?=Google
+    persist.sys.pihooks_mainline_PRODUCT?=caiman
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.pihooks.first_api_level=32
 
 # PIF GMS Spoof
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.pihooks_BRAND=google \
-    persist.sys.pihooks_DEVICE=akita \
-    persist.sys.pihooks_DEVICE_INITIAL_SDK_INT=21 \
-    persist.sys.pihooks_FINGERPRINT=google/akita_beta/akita:15/AP31.240617.015/12207491:user/release-keys \
-    persist.sys.pihooks_ID=AP31.240617.015 \
-    persist.sys.pihooks_MANUFACTURER=Google \
-    persist.sys.pihooks_MODEL="Pixel\ 8a" \
-    persist.sys.pihooks_PRODUCT=akita_beta \
-    persist.sys.pihooks_SECURITY_PATCH=2024-08-05
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PIHOOKS_BUILD_FINGERPRINT="google/caiman/caiman:14/AD1A.240530.047.U1/12150698:user/release-keys" \
-    PIHOOKS_MODEL_SPOOF="Pixel 9 Pro"
+    PIHOOKS_BRAND="google" \
+    PIHOOKS_MODEL="Pixel 8a" \
+    PIHOOKS_MANUFACTURER="Google" \
+    PIHOOKS_DEVICE="akita" \
+    PIHOOKS_PRODUCT="akita_beta" \
+    PIHOOKS_DEVICE_INITIAL_SDK_INT="21" \
+    PIHOOKS_FINGERPRINT="google/akita_beta/akita:15/AP31.240617.015/12207491:user/release-keys" \
+    PIHOOKS_ID="AP31.240617.015" \
+    PIHOOKS_SECURITY_PATCH="2024-08-05"
