@@ -56,11 +56,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # PIF GMS Spoof
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PIHOOKS_BRAND="google" \
-    PIHOOKS_MODEL="Pixel 8a" \
+    PIHOOKS_MODEL="Pixel 8 Pro" \
     PIHOOKS_MANUFACTURER="Google" \
-    PIHOOKS_DEVICE="akita" \
-    PIHOOKS_PRODUCT="akita_beta" \
+    PIHOOKS_DEVICE="husky" \
+    PIHOOKS_PRODUCT="husky_beta" \
     PIHOOKS_DEVICE_INITIAL_SDK_INT="21" \
-    PIHOOKS_FINGERPRINT="google/akita_beta/akita:15/AP31.240617.015/12207491:user/release-keys" \
+    PIHOOKS_FINGERPRINT="google/husky_beta/husky:15/AP31.240617.015/12207491:user/release-keys" \
     PIHOOKS_ID="AP31.240617.015" \
     PIHOOKS_SECURITY_PATCH="2024-08-05"
