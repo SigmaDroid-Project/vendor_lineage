@@ -43,17 +43,21 @@ endif
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.default_launcher=0
 
-# Pif
+# PIHOOKS
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.pihooks.first_api_level=32
+
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.pihooks_mainline_BRAND?=google \
     persist.sys.pihooks_mainline_DEVICE?=caiman \
     persist.sys.pihooks_mainline_MANUFACTURER?=Google \
     persist.sys.pihooks_mainline_PRODUCT?=caiman
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.sys.pihooks.first_api_level=32
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PIHOOKS_MAINLINE_FINGERPRINT="google/caiman/caiman:14/AD1A.240530.047.U1/12150698:user/release-keys" \
+    PIHOOKS_MAINLINE_MODEL="Pixel 9 Pro"
 
-# PIF GMS Spoof
+# PIF Fingerprint 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PIHOOKS_BRAND="google" \
     PIHOOKS_MODEL="Pixel 8 Pro" \
