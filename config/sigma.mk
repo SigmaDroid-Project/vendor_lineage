@@ -41,7 +41,9 @@ endif
 
 # Launcher3 as Default Launcher
 PRODUCT_SYSTEM_PROPERTIES += \
-    persist.sys.default_launcher=0
+    persist.sys.default_launcher=0 \
+    persist.sys.quickswitch_pixel_shipped=0
+
 
 # PIHOOKS
 PRODUCT_SYSTEM_PROPERTIES += \
