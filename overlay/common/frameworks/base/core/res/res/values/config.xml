@@ -173,22 +173,47 @@
         <item>device_personalization_services/AdaptiveAudio__use_silence_detector_state_bug_fix=true</item>
 
         <!-- Live Caption (Pixel 2017 + OEM) -->
+        <item>device_personalization_services/Captions__allow_box_x_axis_movement=true</item>
+        <item>device_personalization_services/Captions__allow_use_public_speech_recognition=true</item>
+        <item>device_personalization_services/Captions__allow_voip_call_without_audio_recording=false</item>
+        <item>device_personalization_services/Captions__available_for_download=en-US;en-GB;en-CA;en-IE;en-AU;en-SG;en-IN;fr-FR;fr-CA;fr-BE;fr-CH;it-IT;it-CH;de-DE;de-AT;de-BE;de-CH;ja-JP;es-ES;es-US;cmn-Hant-TW;hi-IN</item>
+        <item>device_personalization_services/Captions__disable_prod=false</item>
+        <!-- <item>device_personalization_services/Captions__enable=false</item> -->
+        <item>device_personalization_services/Captions__enable_adaptive_box_width=true</item>
         <item>device_personalization_services/Captions__enable_augmented_modality=true</item>
         <item>device_personalization_services/Captions__enable_augmented_modality_input=true</item>
         <item>device_personalization_services/Captions__enable_augmented_modality_language_detection=true</item>
-        <item>device_personalization_services/Captions__enable_augmented_music=false</item>
-        <item>device_personalization_services/Captions__enable_clearcut_logging=false</item>
+        <item>device_personalization_services/Captions__enable_augmented_music=true</item>
+        <item>device_personalization_services/Captions__enable_clearcut_logging=true</item>
+        <item>device_personalization_services/Captions__enable_drag_and_double_tap_to_resize=false</item>
+        <item>device_personalization_services/Captions__enable_ec_integration=false</item>
         <item>device_personalization_services/Captions__enable_language_detection=true</item>
-        <item>device_personalization_services/Captions__enable_punctuations=true</item>
         <item>device_personalization_services/Captions__enable_new_model_version_advanced_2023=true</item>
+        <item>device_personalization_services/Captions__enable_one_caption_experiment=false</item>
+        <item>device_personalization_services/Captions__enable_punctuations=true</item>
+        <item>device_personalization_services/Captions__enable_setting_page=false</item>
+        <item>device_personalization_services/Captions__enable_text_transform=true</item>
+        <item>device_personalization_services/Captions__enable_westworld_logging=false</item>
+        <item>device_personalization_services/Captions__enable_zero_day=false</item>
+        <item>device_personalization_services/Captions__manifest_url_template=https://storage.googleapis.com/captions/%{NAMESPACE}_%{VERSION}_manifest.json</item>
+        <item>device_personalization_services/Captions__model_version_v1=20190613</item>
+        <item>device_personalization_services/Captions__model_version_v1_2=20200112</item>
+        <item>device_personalization_services/Captions__new_model_version=20210623</item>
         <item>device_personalization_services/Captions__new_model_version_advanced_2023=20230808</item>
-        <item>device_personalization_services/Captions__allow_use_public_speech_recognition=true</item>
+        <item>device_personalization_services/Captions__speech_threshold=0.2</item>
+        <item>device_personalization_services/Captions__supported_languages=en-US;fr-FR;it-IT;de-DE;ja-JP;es-ES;cmn-Hant-TW;hi-IN</item>
+        <item>device_personalization_services/Captions__supported_languages_beta_quality=ja-JP</item>
+        <item>device_personalization_services/Captions__surface_sound_events=true</item>
+        <item>device_personalization_services/Captions__text_transform_augmented_input=true</item>
+        <item>device_personalization_services/Captions__visibility_playing_duration_millis=5000</item>
+        <item>device_personalization_services/Captions__visibility_stopped_duration_millis=1500</item>
 
         <!-- Smartspace -->
-        <item>device_personalization_services/Cell__enable_cell=true</item>
-        <item>device_personalization_services/Cell__enable_smartspace_events=true</item>
+        <!-- <item>device_personalization_services/Cell__enable_cell=true</item> -->
+        <!-- <item>device_personalization_services/Cell__enable_smartspace_events=true</item> -->
         <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=true</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_allowlist_packages=com.nest.android, com.google.android.apps.chromecast.app, com.ringapp</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=2</item>
         <item>device_personalization_services/Echo__smartspace_enable_async_icon=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_battery_notification_parser=true</item>
@@ -208,8 +233,6 @@
         <item>device_personalization_services/Echo__smartspace_enable_eta_lyft=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_food_delivery_eta=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_grocery=true</item>
-        <item>device_personalization_services/Echo__smartspace_enable_light_off_predictor=true</item>
-        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=false</item>
         <item>device_personalization_services/Echo__smartspace_enable_media_wake_lock_acquire=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_nap=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_nudge=true</item>
@@ -225,21 +248,14 @@
         <item>device_personalization_services/Echo__smartspace_enable_step_predictor=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_subcard_logging=true</item>
         <item>device_personalization_services/Echo__smartspace_gaia_twiddler=true</item>
-        <item>device_personalization_services/Echo__smartspace_outlook_event_source_of_truth=TEXT_ONLY</item>
-        <item>device_personalization_services/Echo__smartspace_package_delivery_card_delay_seconds=0</item>
         <item>device_personalization_services/Echo__smartspace_show_cross_device_timer_label=true</item>
         <item>device_personalization_services/Echo__smartspace_use_flashlight_action_chip=true</item>
         <item>device_personalization_services/Echo_smartspace__enable_flight_landing_smartspace_aiai=true</item>
         <item>device_personalization_services/Echo_smartspace__enable_hotel_smartspace_aiai=true</item>
         <item>device_personalization_services/Echo_smartspace__smartspace_enable_daily_forecast=true</item>
         <item>device_personalization_services/Echo_smartspace__smartspace_enable_timely_reminder=true</item>
-        <item>device_personalization_services/EchoSmartspace__check_notification_visibility=true</item>
-        <item>device_personalization_services/EchoSmartspace__doorbell_when_for_update_time=true</item>
-        <item>device_personalization_services/EchoSmartspace__enable_add_contextual_feedback_button_on_long_press=false</item>
-        <item>device_personalization_services/EchoSmartspace__enable_add_internal_feedback_button=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_agsa_settings_read=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_cross_feature_rank_dedup_twiddler=true</item>
-        <item>device_personalization_services/EchoSmartspace__enable_dimensional_logging=false</item>
         <item>device_personalization_services/EchoSmartspace__enable_encode_subcard_into_smartspace_target_id=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_fitbit_notifications=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_flight_landing_smartspace_aiai=true</item>
@@ -248,14 +264,8 @@
         <item>device_personalization_services/EchoSmartspace__enable_optin_bedtime_adjustment_provider=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_predictor_expiration=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_ring_channels_regex=true</item>
-        <item>device_personalization_services/EchoSmartspace__enable_ring_using_ui_template=true</item>
-        <item>device_personalization_services/EchoSmartspace__enable_travel_features_type_merge=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_weather_data_extras=true</item>
-        <item>device_personalization_services/EchoSmartspace__ring_channels_regex=4_ding_channel_notification\d+</item>
-        <item>device_personalization_services/EchoSmartspace__ring_lockscreen_delay_seconds=0</item>
-        <item>device_personalization_services/EchoSmartspace__ring_on_aod_only=true</item>
         <item>device_personalization_services/EchoSmartspace__runtastic_check_pause_action=true</item>
-        <item>device_personalization_services/EchoSmartspace__runtastic_is_ongoing_default_true=true</item>
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_cross_device_alarm=true</item>
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_daily_forecast=true</item>
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_timely_reminder=true</item>
@@ -304,24 +314,27 @@
         <!-- Google Live Translate -->
         <item>device_personalization_services/SimpleStorage__disable_live_translate_dao_provider=false</item>
         <item>device_personalization_services/Translate__app_blocklist=com.google.android.talk</item>
-        <item>device_personalization_services/Translate__beta_audio_to_text_languages_in_live_caption=ja</item>
         <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
         <item>device_personalization_services/Translate__characterset_lang_detection_enabled=true</item>
+        <item>device_personalization_services/Translate__chat_translate_languages=de,en,es,fr,it,ja,hi,zh,ru,pl,pt,ko,th,tr,nl,zh_Hant,sv,da,vi,ar,fa,no,bn,fil</item>
         <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
         <item>device_personalization_services/Translate__differentiate_simplified_and_traditional_chinese=true</item>
-        <item>device_personalization_services/Translate__disable_session_state=false</item>
-        <item>device_personalization_services/Translate__disable_translate_without_system_animation=true</item>
+        <item>device_personalization_services/Translate__disable_translate_without_system_animation=false</item>
         <item>device_personalization_services/Translate__enable_chronicle_migration=true</item>
-        <item>device_personalization_services/Translate__enable_default_langid_model=false</item>
+        <item>device_personalization_services/Translate__enable_default_langid_model=true</item>
         <item>device_personalization_services/Translate__enable_dictionary_langid_detection=true</item>
-        <item>device_personalization_services/Translate__enable_language_profile_quick_update=false</item>
-        <item>device_personalization_services/Translate__enable_nextdoor=false</item>
-        <item>device_personalization_services/Translate__enable_opmv4_service=false</item>
+        <item>device_personalization_services/Translate__enable_opmv4_service=true</item>
+        <item>device_personalization_services/Translate__enable_settings_backup_restore=false</item>
+        <item>device_personalization_services/Translate__enable_setup_wizard_dialog_v2=false</item>
         <item>device_personalization_services/Translate__enable_spa_setting=false</item>
+        <item>device_personalization_services/Translate__enable_translate_kit_api_migration=false</item>
+        <item>device_personalization_services/Translate__interpreter_source_languages=de,en,ja,es,fr,it</item>
+        <item>device_personalization_services/Translate__interpreter_target_languages=de,en,ja,es,fr,it</item>
         <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=true</item>
+        <item>device_personalization_services/Translate__text_to_text_language_list=vi,ja,fa,ro,nl,mr,mt,ar,ms,it,eo,is,et,es,iw,zh,uk,af,id,ur,mk,cy,hi,el,be,pt,lt,hr,lv,hu,ht,te,de,bg,th,bn,tl,pl,tr,kn,sv,gl,ko,sw,cs,da,ta,gu,ka,sl,ca,sk,ga,sq,no,fi,ru,fr,en,zh_Hant,fil</item>
         <item>device_personalization_services/Translate__translation_service_enabled=true</item>
         <item>device_personalization_services/Translate__translator_expiration_enabled=true</item>
-        <item>device_personalization_services/Translate__use_translate_kit_streaming_api=false</item>
+        <item>device_personalization_services/Translate__use_translate_kit_streaming_api=true</item>
 
         <!-- Gboard -->
         <item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=true</item>
@@ -329,29 +342,30 @@
         <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
         <item>device_personalization_services/SmartRecCompose__enable_compose_action_filter=true</item>
         <item>device_personalization_services/SmartRecCompose__enable_deep_clu_model=true</item>
+        <item>device_personalization_services/SmartDictation__cache_max_size=200</item>
+        <item>device_personalization_services/SmartDictation__caching_strategy=3</item>
         <item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>
         <item>device_personalization_services/SmartDictation__enable_alternatives_from_speech_hypotheses=true</item>
         <item>device_personalization_services/SmartDictation__enable_biasing_for_commands=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_contact_fields=true</item>
         <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts=true</item>
         <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts_learned_from_past_corrections=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_interests_model=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_past_correction=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_interests_model=false</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_past_corrections=true</item>
         <item>device_personalization_services/SmartDictation__enable_biasing_for_screen_context=true</item>
+        <item>device_personalization_services/SmartDictation__enable_personalized_biasing_on_locked_device=false</item>
         <item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
+        <item>device_personalization_services/SmartDictation__enable_stronger_boost_for_generic_phrases_biasing=true</item>
+        <item>device_personalization_services/SmartDictation__exclude_contacts_from_generic_biasing=false</item>
 
         <!-- Pixel Launcher -->
-        <item>launcher/enable_keyboard_transition_sync=true</item>
         <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=true</item>
         <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
         <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
         <item>launcher/ENABLE_QUICK_LAUNCH_V2=true</item>
         <item>launcher/GBOARD_UPDATE_ENTER_KEY=true</item>
-        <item>launcher/enable_quick_search=true</item>
         <item>launcher/enable_one_search=true</item>
         <item>launcher/enable_quick_launch_v2=true</item>
-        <item>launcher/enable_rich_answer=true</item>
-        <item>launcher/ENABLE_SEARCH_HAPTIC_HINT=true</item>
-        <item>launcher/enable_web_suggest_on_default_browser=true</item>
         <item>launcher/long_press_home_button_to_search=true</item>
         <item>launcher/long_press_home_button_to_search_mpr=true</item>
         <item>launcher/press_hold_nav_handle_to_search=true</item>
@@ -363,10 +377,8 @@
         <item>launcher/INVOKE_OMNI_LPH_MPR=true</item>
         <item>launcher/LPNH_SLOP_PERCENTAGE=71</item>
         <item>launcher/LPNH_TIMEOUT_MS=400</item>
-        <item>launcher/show_search_educard_qsb=true</item>
-        <item>launcher/show_three_dot_menu_qsb=true</item>
-        <item>launcher/use_app_search_for_web=true</item>
-        <item>launcher/use_fallback_app_search=true</item>
+        <item>launcher/ANIMATE_LPNH=true</item>
+        <item>launcher/SHRINK_NAV_HANDLE_ON_PRESS=true</item>
 
         <!-- Pixel Launcher (Recents) -->
         <item>device_personalization_services/Overview__enable_barcode_detection=false</item>
