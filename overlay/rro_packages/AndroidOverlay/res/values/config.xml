@@ -124,4 +124,9 @@
      <bool name="config_appCompatUserAppAspectRatioFullscreenIsEnabled">true</bool>
 
      <bool name="config_faceAuthDismissesKeyguard">false</bool>
+
+    <!-- Recents Component Dummy Entry -->
+    <string name="config_recentsComponentName" translatable="false"
+            >com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
+
 </resources>
