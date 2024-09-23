@@ -3,7 +3,15 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/crdroid.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/sigma.mk)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
-$(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
+
+# Pixel additions
+ifeq ($(WITH_GMS),true)
+$(call inherit-product, vendor/pixel-framework/config.mk)
+$(call inherit-product, vendor/pixel-style/config/common.mk)
+
+# Don't dexpreopt prebuilts. (For GMS).
+DONT_DEXPREOPT_PREBUILTS := true
+endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -137,7 +145,6 @@ PRODUCT_PACKAGES += \
 
 # Config
 PRODUCT_PACKAGES += \
-    SimpleDeviceConfig \
     SimpleSettingsConfig
 
 # Extra tools in Lineage
@@ -186,8 +193,11 @@ PRODUCT_PACKAGES += \
     rsync
 
 # Storage manager
+ifeq ($(WITH_GMS),false)
+# Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
+endif
 
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
@@ -222,9 +232,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
 # SetupWizard
+ifeq ($(WITH_GMS),false)
 PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.theme=glif_v4 \
     setupwizard.feature.day_night_mode_enabled=true
+endif
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay/no-rro
 PRODUCT_PACKAGE_OVERLAYS += \

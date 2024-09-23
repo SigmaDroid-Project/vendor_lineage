@@ -9,12 +9,6 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
-# GMS
-ifeq ($(WITH_GMS),true)
-BUILD_GMS_OVERLAYS_AND_PROPS := true
-$(call inherit-product, vendor/gms/products/gms.mk)
-endif
-
 TARGET_SUPPORTS_QUICK_TAP ?= false
 ifeq ($(TARGET_SUPPORTS_QUICK_TAP), true)
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -43,7 +37,6 @@ endif
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.default_launcher=0 \
     persist.sys.quickswitch_pixel_shipped=0
-
 
 # PIHOOKS
 PRODUCT_SYSTEM_PROPERTIES += \
