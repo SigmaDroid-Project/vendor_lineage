@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "PixelSettingsGoogleOverlay",
-    sdk_version: "current",
-    product_specific: true,
-}
