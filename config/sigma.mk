@@ -1,5 +1,9 @@
 PRODUCT_BRAND ?= Sigma
 
+# Cloned app exemption
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-sigma-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-sigma-product.xml
+
 ifeq ($(TARGET_INCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
