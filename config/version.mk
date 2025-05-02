@@ -20,8 +20,5 @@ LINEAGE_DISPLAY_VERSION := Sigma$(SIGMA_VARIANT)-$(SIGMA_VERSION)-$(SIGMA_BUILD_
 
 # LineageOS version properties
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.sigma.build.version=$(CR_VERSION) \
     ro.crdroid.display.version=$(LINEAGE_DISPLAY_VERSION) \
-    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION) \
-    ro.sigma.display.version=$(LINEAGE_DISPLAY_VERSION) \
-    ro.sigma.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)
+    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION)
